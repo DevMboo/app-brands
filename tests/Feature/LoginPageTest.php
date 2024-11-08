@@ -8,10 +8,6 @@ use App\Livewire\Pages\Components\Register;
 use App\Livewire\Pages\Components\Forget;
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-
-
-uses(RefreshDatabase::class);
 
 beforeEach(function () {
     $this->user = User::factory()->create([
