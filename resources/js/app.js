@@ -7,3 +7,5 @@ document.addEventListener('livewire:init', () => {
         }, 1800);
     })
 })
+
+console.clear();

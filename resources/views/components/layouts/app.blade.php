@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ $title ?? 'Page Title' }}</title>
-        @livewireStyles
         @vite('resources/css/app.css')
+        @livewireStyles
     </head>
     <body>
         <main class="flex gap-3">
@@ -24,6 +24,8 @@
         <!-- TOASTS START -->
         <livewire:pages.components.toast /><!-- TOASTS END -->
     </body>
-    @livewireScripts
+    
     @vite('resources/js/app.js')
+    @livewireScripts
+    @livewireChartsScripts
 </html>

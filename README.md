@@ -1,66 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Guia de Instalação e Configuração (Windows)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este é um projeto baseado em Laravel 11, PHP 8.2, Node.js 22, Livewire 3, Tailwind CSS, e Flowbite. Siga os passos abaixo para configurar e rodar o projeto localmente no Windows.
 
-## About Laravel
+## Requisitos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Antes de começar, certifique-se de que você tenha as seguintes dependências instaladas:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [PHP 8.2](https://www.php.net/)
+- [Composer](https://getcomposer.org/)
+- [Node.js 22](https://nodejs.org/)
+- [NPM](https://www.npmjs.com/)
+- [Git](https://git-scm.com/)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Se você não tiver o PHP e o Composer configurados globalmente, pode ser útil usar o [XAMPP](https://www.apachefriends.org/pt_br/index.html) para configurar um ambiente PHP local de maneira mais simples no Windows.
 
-## Learning Laravel
+## Passos para Instalação
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 1. Clonar o Repositório
+Clone o repositório em seu diretório local:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+git clone https://github.com/DevMboo/app-brands
+cd seu-diretorio/app-brands
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2. Instalar as Dependências do PHP
+Instale as dependências do PHP usando o Composer. Abra o terminal no diretório do projeto e execute:
+Execute no terminal: composer install
 
-## Laravel Sponsors
+### 3. Configurar o Ambiente
+Copie o arquivo .env.example para .env, (Deixei dentro dentro do arquivo, o mesmo .env que utilizei na criação do projeto)
+Em seguida, gere a chave da aplicação Laravel:
+Execute no terminal: php artisan key:generate
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 4. Instalar as Dependências do Node.js
+Execute no terminal: npm install
 
-### Premium Partners
+### 5. Rodar as Migrações
+Execute as migrações para configurar as tabelas do banco de dados:
+Execute no terminal: php artisan migrate
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 6. Execute a seeder
+Crie o usuário teste via seeder 
+Execute no terminal: php artisan db:seed
 
-## Contributing
+### 7. Configurar o Vite
+O projeto utiliza o Vite para empacotar e compilar os assets. Para rodar o Vite em modo de desenvolvimento, use o seguinte comando:
+npm run dev
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 8. Inicie o Servidor Local
+Você pode rodar o servidor Laravel localmente usando o Artisan:
+php artisan serve
 
-## Code of Conduct
+Tecnologias Utilizadas
+Laravel 11: Framework PHP para backend.
+PHP 8.2: Versão do PHP utilizada.
+Node.js 22: Ambiente JavaScript para rodar o Vite e outras ferramentas de desenvolvimento.
+Vite: Bundler de front-end rápido.
+Livewire 3: Framework para criação de componentes dinâmicos no Laravel.
+Tailwind CSS: Framework CSS para construção de interfaces responsivas.
+Flowbite: Biblioteca de componentes UI baseada em Tailwind CSS.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Comandos Úteis
+Rodar o servidor Laravel: php artisan serve
+Rodar o Vite em desenvolvimento: npm run dev
+Compilar assets para produção: npm run build
+Rodar o Queue Listener: php artisan queue:listen --tries=1
+Problemas Conhecidos
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Caso você enfrente problemas ao rodar o projeto, verifique:
+As dependências do PHP e do Node.js estão instaladas corretamente.
+O arquivo .env está configurado com as credenciais corretas do banco de dados.
+Se estiver tendo problemas com o Vite no Windows, tente rodar o comando npm run dev no prompt de comando ou PowerShell em vez do Git Bash, pois pode haver questões de compatibilidade.

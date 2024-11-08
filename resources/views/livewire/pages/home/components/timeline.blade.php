@@ -1,7 +1,7 @@
 
 <div>
     <div class="flex justify-between pb-5">
-        <h3 class="mb-4 text-gray-600 font-semibold">Histórico de alterações</h3>
+        <h3 class="mb-4 text-gray-600 font-semibold">Histórico de atividades</h3>
         <div>
             <div class="relative" x-data="{ expanded: false }">
                 <button 
@@ -114,8 +114,8 @@
                     
                             <div x-data="{ openBefore: false }">
                                 <div class="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300 mb-4">
-                                    <div class="mb-2 font-semibold text-gray-700 dark:text-gray-200">
-                                        <button @click="openBefore = !openBefore" class="flex items-center">
+                                    <div class="mb-2 font-semibold text-gray-700 dark:text-gray-200 w-full">
+                                        <button @click="openBefore = !openBefore" class="flex items-center w-full justify-between">
                                             <span class="mr-2">Antes</span>
                                             <svg :class="{'rotate-180': openBefore}" class="w-4 h-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -139,8 +139,8 @@
                     
                             <div x-data="{ openAfter: false }">
                                 <div class="p-3 mb-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
-                                    <div class="mb-2 font-semibold text-gray-700 dark:text-gray-200">
-                                        <button @click="openAfter = !openAfter" class="flex items-center">
+                                    <div class="mb-2 font-semibold text-gray-700 dark:text-gray-200 w-full">
+                                        <button @click="openAfter = !openAfter" class="flex items-center w-full justify-between">
                                             <span class="mr-2">Depois</span>
                                             <svg :class="{'rotate-180': openAfter}" class="w-4 h-4 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -179,7 +179,7 @@
                                 {{ $timeline->getDialogMessage() }}, alteração feita por 
                                 <a href="#" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">{{ $timeline->user->name }}</a>
                                 <button class="bg-gray-100 text-gray-800 text-xs font-normal px-2.5 py-0.5 rounded dark:bg-gray-600 dark:text-gray-300 cursor-pointer" type="button" @click="openBefore = !openBefore">
-                                    Veja item deletado
+                                    Visualizar item deletado
                                 </button>
                             </div>
                     
