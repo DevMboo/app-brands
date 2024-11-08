@@ -26,6 +26,16 @@
                         @enderror
                     </div>
                     <div>
+                        <div class="flex justify-between">
+                            <div>
+                                <button type="button" class="text-neutral-800 hover:text-neutral-600 hover:underline text-sm" @click="$dispatch('show-modal-register')">Cadastre-se</button>
+                            </div>
+                            <div>
+                                <button type="button" class="text-neutral-800 hover:text-neutral-600 hover:underline text-sm" @click="$dispatch('show-modal-forget')">Esqueci minha senha</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
                         <button type="submit" class="w-full flex items-center justify-center text-white bg-slate-600 hover:bg-slate-700 focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800">
                             <div class="animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-white rounded-full" wire:loading role="status" aria-label="loading">
                                 <span class="sr-only">Loading...</span>
@@ -39,4 +49,7 @@
             </form>
         </div>
     </div>
+
+    <livewire:pages.components.register />
+    <livewire:pages.components.forget />
 </div>

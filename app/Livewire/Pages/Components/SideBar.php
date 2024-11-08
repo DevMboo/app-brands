@@ -3,6 +3,7 @@
 namespace App\Livewire\Pages\Components;
 
 use Livewire\Component;
+use Livewire\Attributes\On; 
 
 class SideBar extends Component
 {
@@ -20,6 +21,13 @@ class SideBar extends Component
         }
 
     }
+
+    #[On('show-menu')] 
+    public function show()
+    {
+        $this->render = !$this->render;
+    }
+    
 
     public function loggout()
     {

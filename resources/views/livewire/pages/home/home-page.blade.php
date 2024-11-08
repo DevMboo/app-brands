@@ -1,5 +1,5 @@
 <div>
-    <div class="grid grid-cols-4 mb-2 gap-3 me-3">
+    <div class="flex md:grid grid-cols-4 mb-2 gap-3 me-3 md:overflow-hidden overflow-x-auto scrollbar-none">
 
         <livewire:pages.components.card-progress :title="'Grupos Ativos'" :total="$totals['groups']" :ico="'assets/icons/groups.svg'" />
 
@@ -14,7 +14,7 @@
     <div class="min-h-screen w-full bg-slate-100 rounded-s-2xl">
         <div class="w-full px-3 py-4 relative">
             <div class="grid grid-cols-3 divide-x gap-8">
-                <div class="col-span-2">
+                <div class="col-span-3 md:col-span-2">
                     <div class="flex gap-2 items-center">
                         <svg class="size-9 ps-2 text-gray-600" xmlns="http://www.w3.org/2000/svg" width="24"
                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -26,7 +26,7 @@
                             Ações rápidas</h1>
                     </div>
 
-                    <div class="flex gap-3 my-4">
+                    <div class="flex gap-3 my-4 md:overflow-hidden overflow-x-auto scrollbar-none">
                         <div class="flex-shrink-0 w-[174px]">
                             <button @click="$dispatch('show-created-group')"
                                 class="w-full h-20 border border-gray-200 rounded-lg px-3 hover:bg-neutral-300 bg-neutral-700 text-neutral-400 flex items-center">
@@ -125,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="col-span-1 relative ps-6">
+                <div class="col-span-3 md:col-span-1 relative ps-6">
                     <livewire:pages.home.components.timeline :limit="10" />
                 </div>
             </div>

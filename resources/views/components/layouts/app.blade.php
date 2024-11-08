@@ -9,7 +9,7 @@
         @livewireStyles
     </head>
     <body>
-        <main class="flex gap-3">
+        <main class="flex md:gap-3 overflow-x-hidden" x-data="{ isOpen: false }">
             <livewire:pages.components.side-bar />
 
             <div class="flex flex-col w-screen">

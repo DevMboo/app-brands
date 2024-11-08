@@ -1,4 +1,4 @@
-<div class="col-span-1 relative">
+<div class="col-span-4 md:col-span-1 relative">
     <a href="#"
         class="w-full h-28 px-3 flex items-center gap-3 relative bg-white group hover:bg-neutral-700 hover:text-neutral-400 rounded-2xl border border-gray-200">
         <svg class="size-12" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
