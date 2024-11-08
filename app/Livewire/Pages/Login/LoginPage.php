@@ -15,31 +15,23 @@ class LoginPage extends Component
 
     public string $password = "";
 
-    public function messages(): array
-    {
-        return [
-            'email.email' => '* O campo e-mail não está válido, é necessario conter "@" ou ".com" verifique.',
-            'email.required' => '* O campo e-mail é obrigatório.',
-            'email.min' => '* O campo e-mail deve conter no mínimo :min caracteres.',
-            'email.max' => '* O campo e-mail deve conter no máximo :min caracteres.',
-
-            'password.required' => '* O campo senha é obrigatório.',
-            'password.min' => '* O campo senha deve conter no mínimo :min caracteres.',
-            'password.max' => '* O campo senha deve conter no máximo :max caracteres.'
-        ];
-    }
-
-    public function rules(): array
-    {
-        return [
-            'email' => 'required|email|min:8|max:255',
-            'password' => 'required|min:8|max:70',
-        ];
-    }
-
     public function auth()
     {
-        $this->validate();
+        $this->validate(
+            [
+                'email' => 'required|email|min:8|max:255',
+                'password' => 'required|min:8|max:70',
+            ]
+            ,[
+                'email.email' => '* O campo e-mail não está válido, é necessario conter "@" ou ".com" verifique.',
+                'email.required' => '* O campo e-mail é obrigatório.',
+                'email.min' => '* O campo e-mail deve conter no mínimo :min caracteres.',
+                'email.max' => '* O campo e-mail deve conter no máximo :min caracteres.',
+
+                'password.required' => '* O campo senha é obrigatório.',
+                'password.min' => '* O campo senha deve conter no mínimo :min caracteres.',
+                'password.max' => '* O campo senha deve conter no máximo :max caracteres.'
+            ]);
 
         $credentials = [
             'email' => $this->email,

@@ -8,9 +8,11 @@ use App\Livewire\Pages\Group\GroupPage;
 use App\Livewire\Pages\Home\HomePage;
 use App\Livewire\Pages\Login\LoginPage;
 use App\Livewire\Pages\Unity\UnityPage;
+use App\Livewire\Pages\Reset\ResetPage;
 use App\Livewire\Pages\Report\ReportPage;
 
 Route::get('/login', LoginPage::class)->name('login');
+Route::get('/reset/{token}', ResetPage::class)->name('reset');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', HomePage::class)->name('home');

@@ -5,18 +5,19 @@ namespace App\Livewire\Pages\Components;
 use Livewire\Component;
 use Livewire\Attributes\On; 
 
+use Illuminate\Support\Str;
 class SideBar extends Component
 {
 
     public bool $render = true;
 
-    public array $notRender = ['login'];
+    public array $notRender = ['login','reset*'];
 
     public function mount()
     {
         $currentRouteName = request()->route()->getName();
 
-        if (in_array($currentRouteName, $this->notRender)) {
+        if (Str::is($this->notRender, $currentRouteName)) {
             $this->render = false;
         }
 
