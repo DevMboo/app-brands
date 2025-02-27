@@ -1,72 +1,122 @@
-# Guia de Instalação e Configuração (Windows)
 
-Este é um projeto baseado em Laravel 11, PHP 8.2, Node.js 22, Livewire 3, Tailwind CSS, e Flowbite. Siga os passos abaixo para configurar e rodar o projeto localmente no Windows.
+---
 
-## Requisitos
+# 📌 Guia de Instalação e Configuração (Windows)  
 
-Antes de começar, certifique-se de que você tenha as seguintes dependências instaladas:
+Este projeto utiliza **Laravel 11, PHP 8.2, Node.js 22, Livewire 3, Tailwind CSS e Flowbite**. Siga os passos abaixo para configurar e rodar o projeto localmente no Windows.  
 
-- [PHP 8.2](https://www.php.net/)
-- [Composer](https://getcomposer.org/)
-- [Node.js 22](https://nodejs.org/)
-- [NPM](https://www.npmjs.com/)
-- [Git](https://git-scm.com/)
+## 📌 Requisitos  
 
-Se você não tiver o PHP e o Composer configurados globalmente, pode ser útil usar o [XAMPP](https://www.apachefriends.org/pt_br/index.html) para configurar um ambiente PHP local de maneira mais simples no Windows.
+Antes de começar, certifique-se de que você tenha as seguintes dependências instaladas:  
 
-## Passos para Instalação
+- 📌 [PHP 8.2](https://www.php.net/)  
+- 📌 [Composer](https://getcomposer.org/)  
+- 📌 [Node.js 22](https://nodejs.org/)  
+- 📌 [NPM](https://www.npmjs.com/)  
+- 📌 [Git](https://git-scm.com/)  
 
-### 1. Clonar o Repositório
-Clone o repositório em seu diretório local:
+Se você não tiver **PHP** e **Composer** configurados globalmente, pode ser útil usar o [XAMPP](https://www.apachefriends.org/pt_br/index.html) para configurar um ambiente PHP local de maneira mais simples no Windows.  
 
-git clone https://github.com/DevMboo/app-brands
-cd seu-diretorio/app-brands
+---
 
-### 2. Instalar as Dependências do PHP
-Instale as dependências do PHP usando o Composer. Abra o terminal no diretório do projeto e execute:
-Execute no terminal: composer install
+## 📌 Passos para Instalação  
 
-### 3. Configurar o Ambiente
-Copie o arquivo .env.example para .env, (Deixei dentro dentro do arquivo, o mesmo .env que utilizei na criação do projeto)
-Em seguida, gere a chave da aplicação Laravel:
-Execute no terminal: php artisan key:generate
+### 🚀 1. Clonar o Repositório  
 
-### 4. Instalar as Dependências do Node.js
-Execute no terminal: npm install
+```sh
+git clone https://github.com/DevMboo/app-brands  
+cd app-brands  
+```
 
-### 5. Rodar as Migrações
-Execute as migrações para configurar as tabelas do banco de dados:
-Execute no terminal: php artisan migrate
+### 🚀 2. Instalar as Dependências do PHP  
 
-### 6. Execute a seeder
-Crie o usuário teste via seeder 
-Execute no terminal: php artisan db:seed
+Instale as dependências do Laravel com o **Composer**:  
 
-### 7. Configurar o Vite
-O projeto utiliza o Vite para empacotar e compilar os assets. Para rodar o Vite em modo de desenvolvimento, use o seguinte comando:
-npm run dev
+```sh
+composer install  
+```
 
-### 8. Inicie o Servidor Local
-Você pode rodar o servidor Laravel localmente usando o Artisan:
-php artisan serve
+### 🚀 3. Configurar o Ambiente  
 
-Tecnologias Utilizadas
-Laravel 11: Framework PHP para backend.
-PHP 8.2: Versão do PHP utilizada.
-Node.js 22: Ambiente JavaScript para rodar o Vite e outras ferramentas de desenvolvimento.
-Vite: Bundler de front-end rápido.
-Livewire 3: Framework para criação de componentes dinâmicos no Laravel.
-Tailwind CSS: Framework CSS para construção de interfaces responsivas.
-Flowbite: Biblioteca de componentes UI baseada em Tailwind CSS.
+Copie o arquivo **`.env.example`** para **`.env`**:  
 
-Comandos Úteis
-Rodar o servidor Laravel: php artisan serve
-Rodar o Vite em desenvolvimento: npm run dev
-Compilar assets para produção: npm run build
-Rodar o Queue Listener: php artisan queue:listen --tries=1
-Problemas Conhecidos
+```sh
+cp .env.example .env  
+```
 
-Caso você enfrente problemas ao rodar o projeto, verifique:
-As dependências do PHP e do Node.js estão instaladas corretamente.
-O arquivo .env está configurado com as credenciais corretas do banco de dados.
-Se estiver tendo problemas com o Vite no Windows, tente rodar o comando npm run dev no prompt de comando ou PowerShell em vez do Git Bash, pois pode haver questões de compatibilidade.
+Em seguida, gere a chave da aplicação:  
+
+```sh
+php artisan key:generate  
+```
+
+### 🚀 4. Instalar as Dependências do Node.js  
+
+```sh
+npm install  
+```
+
+### 🚀 5. Rodar as Migrações  
+
+Execute as migrações para configurar as tabelas do banco de dados:  
+
+```sh
+php artisan migrate  
+```
+
+### 🚀 6. Executar a Seeder  
+
+Crie o usuário de teste via **seeder**:  
+
+```sh
+php artisan db:seed  
+```
+
+### 🚀 7. Configurar o Vite  
+
+O projeto utiliza **Vite** para empacotar e compilar os assets. Para rodá-lo em modo de desenvolvimento, execute:  
+
+```sh
+npm run dev  
+```
+
+### 🚀 8. Iniciar o Servidor Local  
+
+```sh
+php artisan serve  
+```
+
+---
+
+## 📌 Tecnologias Utilizadas  
+
+- **Laravel 11** – Framework PHP para backend.  
+- **PHP 8.2** – Versão do PHP utilizada.  
+- **Node.js 22** – Ambiente JavaScript para rodar o **Vite** e outras ferramentas.  
+- **Vite** – Bundler de front-end rápido.  
+- **Livewire 3** – Framework para criação de componentes dinâmicos no Laravel.  
+- **Tailwind CSS** – Framework CSS para interfaces responsivas.  
+- **Flowbite** – Biblioteca de componentes UI baseada em Tailwind CSS.  
+
+---
+
+## 📌 Comandos Úteis  
+
+| Comando | Descrição |  
+|---------|-------------|  
+| `php artisan serve` | Inicia o servidor Laravel |  
+| `npm run dev` | Roda o **Vite** em modo de desenvolvimento |  
+| `npm run build` | Compila os assets para produção |  
+| `php artisan queue:listen --tries=1` | Inicia o **Queue Listener** |  
+
+---
+
+## 📌 Problemas Conhecidos  
+
+Caso enfrente dificuldades, verifique:  
+
+- Se todas as dependências do **PHP** e **Node.js** estão instaladas corretamente.  
+- Se o arquivo **`.env`** está configurado com as credenciais corretas do banco de dados.  
+- Se estiver com problemas no **Vite** no Windows, tente rodar o comando `npm run dev` no **Prompt de Comando** ou **PowerShell**, em vez do **Git Bash**, pois pode haver incompatibilidades.  
+
+Se precisar de mais ajustes, é só avisar! 🚀
