@@ -118,5 +118,3 @@ Caso enfrente dificuldades, verifique:
 - Se todas as dependências do **PHP** e **Node.js** estão instaladas corretamente.  
 - Se o arquivo **`.env`** está configurado com as credenciais corretas do banco de dados.  
 - Se estiver com problemas no **Vite** no Windows, tente rodar o comando `npm run dev` no **Prompt de Comando** ou **PowerShell**, em vez do **Git Bash**, pois pode haver incompatibilidades.  
-
-Se precisar de mais ajustes, é só avisar! 🚀
